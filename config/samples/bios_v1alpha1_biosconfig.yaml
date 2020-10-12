@@ -1,0 +1,7 @@
+apiVersion: bios.redhat.com/v1alpha1
+kind: BiosConfig
+metadata:
+  name: biosconfig-sample
+spec:
+  # Add fields here
+  foo: bar

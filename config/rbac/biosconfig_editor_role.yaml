@@ -1,0 +1,24 @@
+# permissions for end users to edit biosconfigs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: biosconfig-editor-role
+rules:
+- apiGroups:
+  - bios.redhat.com
+  resources:
+  - biosconfigs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - bios.redhat.com
+  resources:
+  - biosconfigs/status
+  verbs:
+  - get
